@@ -1,0 +1,25 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props
+---
+
+<button class="button">
+	{title}
+</button>
+
+<style>
+	.button {
+		padding: 1rem;
+		width: 200px; 
+		font-size: 20px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	@media (max-width: 700px;) {
+		
+	}
+</style>
+

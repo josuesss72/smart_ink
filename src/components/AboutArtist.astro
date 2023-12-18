@@ -1,0 +1,68 @@
+---
+import ButtonGlobal from '../components/buttons/ButtonGlobal.astro'
+---
+
+<section>
+	<div class="box_port_page">
+		<img class="port-page" src="../../public/Helene Paquet.png" alt="">
+	</div>
+	<div class="box_about">
+		<h2>Josue Sarmiento Vides</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, hic autem suscipit cumque vero eligendi laborum ipsam laboriosam accusamus veritatis. Aspernatur.</p>	
+		<ButtonGlobal title='FOLLOW'/>
+		<div class='box_icon'>
+			<a href="https://www.facebook.com/josue.sarmientovides"><iconify-icon icon='ic:baseline-facebook'></iconify-icon></a>
+			<a href="https://www.instagram.com/jjdanielsarmiento/"><iconify-icon icon='ri:instagram-fill'></iconify-icon></a>
+		</div>
+	</div>
+</section>
+
+<style>
+	section {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		max-width: 700px;
+		margin: 0 auto 0 auto
+	}
+	a {
+		font-size: 40px;
+	}
+	.icon {
+		width: 40px;
+	}
+	.icon:hover {
+		color: #5C8374;
+		cursor: pointer;
+	}
+	.box_icon {
+		display: flex;
+		gap: 1rem;
+	}
+	.box_about {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.5rem ;
+	}
+	.box_about p {
+		font-size: 16px;
+	}
+	.box_port_page {
+		display: flex;
+	}
+	.port-page {
+		margin: auto;
+		width: 200px;
+	}
+
+	@media (max-width: 700px) {
+		section {
+			flex-direction: column;
+		}
+		.box_about {
+			gap: 1rem;
+		}
+	}
+</style>

@@ -1,0 +1,81 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- <header>
+			<div>
+				<img class="port_img" src="../../public/Helene Paquet.png" alt="">
+			</div>
+		</header> -->
+		<slot />
+	</body>
+	
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	/* header {
+		padding: 0.3rem;
+		background: #183D3D;
+		display: flex;
+		align-items: center;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+	} */
+	.port_img {
+		width: 25px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+	}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #040D12;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
